@@ -10,9 +10,11 @@ import static org.junit.Assert.*;
  */
 public class CustomerTest {
     Customer myCustomer;
+    PaymentMethod myPayment;
     @Before
     public void before(){
         myCustomer = new Customer("Daniel");
+        myPayment = new PaymentMethod(PaymentMethods.BITCOIN);
     }
 
     @Test
@@ -22,9 +24,8 @@ public class CustomerTest {
 
     @Test
     public void canAddPaymentMethod(){
-        myCustomer.addPaymentMethod(PaymentMethods.BITCOIN);
-        assertEquals("BITCOIN", myCustomer.getPaymentMethod().name());
+        myCustomer.addPaymentMethod(myPayment);
+        assertEquals("BITCOIN", myCustomer.getPaymentMethod().getPaymentType());
     }
-
 
 }

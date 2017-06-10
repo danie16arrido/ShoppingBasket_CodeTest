@@ -26,4 +26,5 @@ public class PaymentMethodTest {
         myPayment.addAccountNumber(accountNumber);
         assertEquals(1234567, myPayment.getAccountNumber());
     }
+
 }
