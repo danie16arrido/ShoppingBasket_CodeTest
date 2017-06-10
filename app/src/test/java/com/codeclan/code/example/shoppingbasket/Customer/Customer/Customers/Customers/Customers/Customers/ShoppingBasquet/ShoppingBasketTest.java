@@ -41,6 +41,14 @@ public class ShoppingBasketTest {
         assertEquals(false, myBasket.removeItem(myItem1));
     }
 
+    @Test
+    public void canClearBasket(){
+        myBasket.addItem(myItem);
+        myBasket.addItem(myItem1);
+        assertEquals(2, myBasket.numberOfItems());
+        myBasket.clearItems();
+        assertEquals(0, myBasket.numberOfItems());
+    }
 
 
 

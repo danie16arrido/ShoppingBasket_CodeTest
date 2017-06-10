@@ -35,4 +35,8 @@ public class ShoppingBasket {
         }
         return false;
     }
+
+    public void clearItems() {
+        this.items.clear();
+    }
 }
