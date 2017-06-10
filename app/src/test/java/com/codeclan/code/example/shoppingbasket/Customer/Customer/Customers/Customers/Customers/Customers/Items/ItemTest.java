@@ -28,4 +28,10 @@ public class ItemTest {
         assertEquals("Wireless Mouse", myItem.getDescription());
     }
 
+    @Test
+    public void canSetGetID(){
+        myItem.setId(44);
+        assertEquals(44, myItem.getId());
+    }
+
 }
