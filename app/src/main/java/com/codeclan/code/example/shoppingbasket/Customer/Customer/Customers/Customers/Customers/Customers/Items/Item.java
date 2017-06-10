@@ -5,6 +5,7 @@ package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cus
  */
 
 public class Item implements Chargeable {
+    private int id;
     private double price;
     private String description;
 
@@ -26,5 +27,13 @@ public class Item implements Chargeable {
     @Override
     public String getDescription() {
         return this.description;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
     }
 }
