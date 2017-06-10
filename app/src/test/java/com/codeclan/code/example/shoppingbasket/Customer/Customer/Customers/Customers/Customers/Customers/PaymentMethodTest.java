@@ -9,14 +9,21 @@ import static org.junit.Assert.*;
  * Created by Daniel Garrido on 10/06/2017.
  */
 public class PaymentMethodTest {
-    PaymentMethods myPayment;
+    PaymentMethod myPayment;
     @Before
     public void before(){
-        myPayment = PaymentMethods.BITCOIN;
+        myPayment = new PaymentMethod(PaymentMethods.BITCOIN);
     }
 
     @Test
     public void canGetPaymentMethodName(){
-        assertEquals("BITCOIN", myPayment.name());
+        assertEquals("BITCOIN", myPayment.getPaymentType());
+    }
+
+    @Test
+    public void canGetAddAccountNumberFromPaymentMethod(){
+        long accountNumber =  1234567;
+        myPayment.addAccountNumber(accountNumber);
+        assertEquals(1234567, myPayment.getAccountNumber());
     }
 }

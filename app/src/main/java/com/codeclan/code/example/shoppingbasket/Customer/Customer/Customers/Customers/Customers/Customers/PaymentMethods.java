@@ -7,5 +7,6 @@ package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cus
 public enum PaymentMethods {
     PAYPAL,
     BITCOIN,
-    CREDITCARD
+    CREDITCARD;
+
 }
