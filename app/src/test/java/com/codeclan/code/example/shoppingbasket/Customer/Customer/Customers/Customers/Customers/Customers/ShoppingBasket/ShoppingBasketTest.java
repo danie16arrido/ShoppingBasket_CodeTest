@@ -24,13 +24,14 @@ public class ShoppingBasketTest {
         myBasket = new ShoppingBasket();
         factory = new ItemFactory();
         myItem = (Item) factory.createItem();
-        myItem1 = (Item) factory.createItem();
+        myItem1 = (Item) factory.createItem(35, "hola");
     }
 
     @Test
     public void canAddItem(){
         myBasket.addItem(myItem);
-        assertEquals(1, myBasket.numberOfItems());
+        myBasket.addItem(myItem1);
+        assertEquals(2, myBasket.numberOfItems());
     }
 
     @Test

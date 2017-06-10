@@ -1,5 +1,6 @@
 package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.ShoppingBasket;
 
+import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Customer;
 import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Items.Item;
 
 import java.util.HashMap;
@@ -10,9 +11,19 @@ import java.util.HashMap;
 
 public class ShoppingBasket {
     HashMap<Item, Integer> list;
+    Customer customer;
 
     public ShoppingBasket(){
         this.list = new HashMap<>();
+    }
+
+    public ShoppingBasket(Customer customer){
+        this.list = new HashMap<>();
+        this.customer = customer;
+    }
+
+    public Customer getCustomer(){
+        return this.customer;
     }
 
     public void addItem(Item myItem) {
@@ -56,25 +67,4 @@ public class ShoppingBasket {
     public HashMap<Item,Integer> getList() {
         return this.list;
     }
-
-
-//    public Item findItemById(Integer id) {
-//        for (item: list){
-//            Integer itemId=  item.getId();
-//            if (itemId ==  id){
-//                return (Item) item;
-//            }
-//        }
-//        return null;
-//    }
-//
-//    public  boolean deleteItem(Item myItem) {
-//        Item toBeDeleted;
-//        toBeDeleted = findItemById(myItem.getId());
-//        if (toBeDeleted != null){
-//            this.list.remove(toBeDeleted.getId());
-//            return true;
-//        }
-//        return false;
-//    }
 }

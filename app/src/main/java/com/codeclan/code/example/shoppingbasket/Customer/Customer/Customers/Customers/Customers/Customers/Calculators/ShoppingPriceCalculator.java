@@ -1,5 +1,6 @@
 package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Calculators;
 
+import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Items.Discountable;
 import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Items.Item;
 import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.ShoppingBasket.ShoppingBasket;
 
@@ -12,9 +13,11 @@ import java.util.HashMap;
 public class ShoppingPriceCalculator {
 
     private ShoppingBasket basket;
+    private double finalTotal;
 
     public void addBasket(ShoppingBasket myBasket) {
         this.basket = myBasket;
+        this.finalTotal = 0;
     }
 
     public ShoppingBasket getBasket() {
@@ -35,6 +38,14 @@ public class ShoppingPriceCalculator {
             total += (item.getKey().getDiscountedPrice() * item.getValue());
         }
         return total;
+    }
+
+    public void setFinalTotal(double value){
+        this.finalTotal = value;
+    }
+
+    public double getFinalTotal(){
+        return this.finalTotal;
     }
 
 }
