@@ -11,6 +11,28 @@ public class Item implements Chargeable, Discountable {
     private double discount;
     private String discountDescription;
 
+    public Item(){
+
+    }
+
+    public Item(double price, String description){
+        this.price = price;
+        this.description = description;
+    }
+
+    public Item(double price, String description, double discount){
+        this.price = price;
+        this.description = description;
+        this.setDiscount(discount);
+    }
+
+    public Item(double price, String description, double discount, String discountDescription){
+        this.price = price;
+        this.description = description;
+        this.setDiscount(discount);
+        this.setDiscountDescription(discountDescription);
+    }
+
     @Override
     public double getPrice() {
         return this.price;

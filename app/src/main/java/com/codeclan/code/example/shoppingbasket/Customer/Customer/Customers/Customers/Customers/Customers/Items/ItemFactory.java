@@ -14,4 +14,22 @@ public class ItemFactory {
         newItem.setId(++idCount);
         return newItem;
     }
+
+    public static Chargeable createItem(double price, String description){
+        Item newItem = new Item(price, description);
+        newItem.setId(++idCount);
+        return newItem;
+    }
+
+    public static Chargeable createItem(double price, String description, double discount){
+        Item newItem = new Item(price, description, discount);
+        newItem.setId(++idCount);
+        return newItem;
+    }
+
+    public static Chargeable createItem(double price, String description, double discount, String discountDescription){
+        Item newItem = new Item(price, description, discount, discountDescription);
+        newItem.setId(++idCount);
+        return newItem;
+    }
 }

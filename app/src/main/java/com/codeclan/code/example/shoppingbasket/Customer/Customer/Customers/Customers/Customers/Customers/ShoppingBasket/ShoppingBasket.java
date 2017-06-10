@@ -53,6 +53,11 @@ public class ShoppingBasket {
         }
     }
 
+    public HashMap<Item,Integer> getList() {
+        return this.list;
+    }
+
+
 //    public Item findItemById(Integer id) {
 //        for (item: list){
 //            Integer itemId=  item.getId();

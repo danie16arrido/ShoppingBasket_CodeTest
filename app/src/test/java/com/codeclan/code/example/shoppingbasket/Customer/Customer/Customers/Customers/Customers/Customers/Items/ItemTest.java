@@ -13,12 +13,12 @@ public class ItemTest {
     Item myItem;
     @Before
     public void before(){
-        myItem = new Item();
+        myItem = new Item(12.3, "Pen");
     }
 
     @Test
     public void setPrice() throws Exception {
-        myItem.setPrice(12.3);
+//        myItem.setPrice(12.3);
         assertEquals(12.3, myItem.getPrice(), delta);
     }
 
