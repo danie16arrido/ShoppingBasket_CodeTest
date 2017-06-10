@@ -13,4 +13,3 @@ public class ItemFactory {
         return newItem;
     }
 }
-//    public static Animalable createAnimal(Animalable.AnimalSubClass subClass){

@@ -9,16 +9,28 @@ import static org.junit.Assert.*;
  * Created by Daniel Garrido on 10/06/2017.
  */
 public class ItemFactoryTest {
-    ItemFactory factory;
+    ItemFactory factory1;
+    Item item1;
+    Item item2;
+    Item item3;
 
     @Before
     public void before(){
-        factory = new ItemFactory();
+        factory1 = new ItemFactory();
+        item1 = (Item) factory1.createItem();
+        item2 = (Item) factory1.createItem();
+        item3 = (Item) factory1.createItem();
     }
+
     @Test
-    public void canKeepTrackOfId(){
-        Item item1 = (Item) factory.createItem();
+    public void canKeepTrackOfIdMoreThanOneTime(){
         assertEquals(1, item1.getId());
     }
+
+    @Test
+    public void canKeepTrackOfID(){
+        assertEquals(6, item3.getId());
+    }
+
 
 }
