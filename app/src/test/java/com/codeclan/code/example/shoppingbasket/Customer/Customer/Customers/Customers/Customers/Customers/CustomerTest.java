@@ -1,7 +1,5 @@
 package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers;
 
-import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Customer;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +22,7 @@ public class CustomerTest {
 
     @Test
     public void canAddPaymentMethod(){
-        myCustomer.addPaymentMethod(PaymentMethod.BITCOIN);
+        myCustomer.addPaymentMethod(PaymentMethods.BITCOIN);
         assertEquals("BITCOIN", myCustomer.getPaymentMethod().name());
     }
 

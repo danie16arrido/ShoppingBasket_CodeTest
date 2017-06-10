@@ -7,7 +7,7 @@ package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cus
 public class Customer {
 
     private String name;
-    private PaymentMethod paymentMethod;
+    private PaymentMethods paymentMethod;
 
     public Customer(String name){
         this.name = name;
@@ -17,11 +17,11 @@ public class Customer {
         return this.name;
     }
 
-    public void addPaymentMethod(PaymentMethod paymentMethod) {
+    public void addPaymentMethod(PaymentMethods paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
 
-    public PaymentMethod getPaymentMethod() {
+    public PaymentMethods getPaymentMethod() {
         return this.paymentMethod;
     }
 }

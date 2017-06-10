@@ -4,7 +4,7 @@ package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cus
  * Created by Daniel Garrido on 10/06/2017.
  */
 
-public enum PaymentMethod {
+public enum PaymentMethods {
     PAYPAL,
     BITCOIN,
     CREDITCARD
