@@ -28,4 +28,15 @@ public class CustomerTest {
         assertEquals("BITCOIN", myCustomer.getPaymentMethod().getPaymentType());
     }
 
+    @Test
+    public void customerDoesNotHaveLoyaltyCardWhenCreated(){
+        assertEquals(false, myCustomer.hasLoyaltyCard());
+    }
+
+    @Test
+    public void canSetCustomerLoyalty(){
+        myCustomer.setLoyaltyCard();
+        assertEquals(true, myCustomer.hasLoyaltyCard());
+    }
+
 }

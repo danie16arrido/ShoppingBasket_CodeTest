@@ -8,9 +8,11 @@ public class Customer {
 
     private String name;
     private PaymentMethod paymentMethod;
+    private boolean loyaltyCardHolder;
 
     public Customer(String name){
         this.name = name;
+        this.loyaltyCardHolder = false;
     }
 
     public String getName(){
@@ -23,5 +25,13 @@ public class Customer {
 
     public PaymentMethod getPaymentMethod() {
         return this.paymentMethod;
+    }
+
+    public boolean hasLoyaltyCard() {
+        return this.loyaltyCardHolder;
+    }
+
+    public void setLoyaltyCard() {
+        this.loyaltyCardHolder = true;
     }
 }
