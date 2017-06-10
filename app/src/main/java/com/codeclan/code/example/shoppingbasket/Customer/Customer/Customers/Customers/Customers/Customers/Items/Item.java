@@ -6,6 +6,7 @@ package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cus
 
 public class Item implements Chargeable {
     private double price;
+    private String description;
 
     @Override
     public double getPrice() {
@@ -15,5 +16,15 @@ public class Item implements Chargeable {
     @Override
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String getDescription() {
+        return this.description;
     }
 }

@@ -22,4 +22,10 @@ public class ItemTest {
         assertEquals(12.3, myItem.getPrice(), delta);
     }
 
+    @Test
+    public void setDescription(){
+        myItem.setDescription("Wireless Mouse");
+        assertEquals("Wireless Mouse", myItem.getDescription());
+    }
+
 }

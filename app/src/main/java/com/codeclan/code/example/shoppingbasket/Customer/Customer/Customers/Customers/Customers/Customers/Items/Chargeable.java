@@ -7,5 +7,7 @@ package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cus
 public interface Chargeable {
 
     public double getPrice();
-    public void setPrice(double v);
+    public void setPrice(double price);
+    public void setDescription(String description);
+    public String getDescription();
 }
