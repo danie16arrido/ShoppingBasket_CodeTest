@@ -21,10 +21,11 @@ public class ShoppingBasketTest {
         myItem = new Item();
     }
 
-//    @Test
-//    public void canAddItem(){
-//        myBasket.addItem();
-//
-//    }
+    @Test
+    public void canAddItem(){
+        myBasket.addItem(myItem);
+        assertEquals(1, myBasket.numberOfItems());
+
+    }
 
 }
