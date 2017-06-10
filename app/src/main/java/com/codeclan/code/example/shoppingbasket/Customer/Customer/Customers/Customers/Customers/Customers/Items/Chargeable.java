@@ -8,6 +8,10 @@ public interface Chargeable {
 
     public double getPrice();
     public void setPrice(double price);
+
     public void setDescription(String description);
     public String getDescription();
+
+    public void setId(int id);
+    public int getId();
 }

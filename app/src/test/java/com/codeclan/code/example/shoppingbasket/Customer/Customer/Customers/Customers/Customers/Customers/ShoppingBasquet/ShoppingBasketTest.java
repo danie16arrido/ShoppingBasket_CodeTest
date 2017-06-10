@@ -1,5 +1,6 @@
 package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.ShoppingBasquet;
 
+
 import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Items.Item;
 import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Items.ItemFactory;
 
@@ -25,8 +26,6 @@ public class ShoppingBasketTest {
         factory = new ItemFactory();
         myItem = (Item) factory.createItem();
         myItem1 = (Item) factory.createItem();
-//        myItem = new Item();
-//        myItem1 = new Item();
     }
 
     @Test
@@ -36,15 +35,11 @@ public class ShoppingBasketTest {
     }
 
     @Test
-    public void canRemoveItemFromBasket(){
+    public void canRemoveItem(){
         myBasket.addItem(myItem);
-        assertEquals(true, myBasket.removeItem(myItem));
-    }
-
-    @Test
-    public void canNotRemoveItemFromBasket(){
-        myBasket.addItem(myItem);
-        assertEquals(false, myBasket.removeItem(myItem1));
+        myBasket.addItem(myItem1);
+        assertEquals(true, myBasket.removeItem(myItem1));
+        assertEquals(1, myBasket.numberOfItems());
     }
 
     @Test
@@ -56,6 +51,19 @@ public class ShoppingBasketTest {
         assertEquals(0, myBasket.numberOfItems());
     }
 
+    @Test
+    public void canGetHowManyUnitsOfEachItem(){
+        myBasket.addItem(myItem);
+        myBasket.addItem(myItem);
+        assertEquals(2, myBasket.unitsPerItem(myItem));
+        myBasket.addItem(myItem);
+        assertEquals(3, myBasket.unitsPerItem(myItem));
+    }
 
+    @Test
+    public void canUpdateItemQuantity(){
+        myBasket.updateItem(myItem, 5);
+        assertEquals(5, myBasket.unitsPerItem(myItem));
+    }
 
 }
