@@ -4,10 +4,12 @@ package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cus
  * Created by Daniel Garrido on 10/06/2017.
  */
 
-public class Item implements Chargeable {
+public class Item implements Chargeable, Discountable {
     private int id;
     private double price;
     private String description;
+    private double discount;
+    private String discountDescription;
 
     @Override
     public double getPrice() {
@@ -35,5 +37,25 @@ public class Item implements Chargeable {
 
     public int getId() {
         return this.id;
+    }
+
+    @Override
+    public double getDiscountedPrice() {
+        return getPrice() * (discount/100);
+    }
+
+    @Override
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
+    @Override
+    public void setDiscountDescription(String description) {
+        this.discountDescription =  description;
+    }
+
+    @Override
+    public String getDiscountDescription() {
+        return this.discountDescription;
     }
 }

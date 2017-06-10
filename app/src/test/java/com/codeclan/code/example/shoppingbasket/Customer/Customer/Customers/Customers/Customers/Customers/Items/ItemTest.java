@@ -34,4 +34,17 @@ public class ItemTest {
         assertEquals(44, myItem.getId());
     }
 
+    @Test
+    public void canSetDiscount(){
+        myItem.setPrice(100);
+        myItem.setDiscount(50);
+        assertEquals(50, myItem.getDiscountedPrice(), 0.01);
+    }
+
+    @Test
+    public void canSetDiscountDescription(){
+        myItem.setDiscountDescription("Buy 1 get 1 free");
+        assertEquals("Buy 1 get 1 free", myItem.getDiscountDescription());
+    }
+
 }
