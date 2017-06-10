@@ -26,4 +26,13 @@ public class ShoppingBasket {
         return this.items.size();
     }
 
+    public boolean removeItem(Item myItem) {
+        for (Chargeable item: items){
+            if (myItem.equals(item)){
+                items.remove(item);
+                return true;
+            }
+        }
+        return false;
+    }
 }

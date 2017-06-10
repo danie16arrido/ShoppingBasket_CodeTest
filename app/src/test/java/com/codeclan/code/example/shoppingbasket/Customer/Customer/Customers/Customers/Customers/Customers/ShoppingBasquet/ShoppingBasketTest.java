@@ -14,18 +14,34 @@ public class ShoppingBasketTest {
 
     ShoppingBasket myBasket;
     Item myItem;
+    Item myItem1;
 
     @Before
     public void before(){
         myBasket = new ShoppingBasket();
         myItem = new Item();
+        myItem1 = new Item();
     }
 
     @Test
     public void canAddItem(){
         myBasket.addItem(myItem);
         assertEquals(1, myBasket.numberOfItems());
-
     }
+
+    @Test
+    public void canRemoveItemFromBasket(){
+        myBasket.addItem(myItem);
+        assertEquals(true, myBasket.removeItem(myItem));
+    }
+
+    @Test
+    public void canNotRemoveItemFromBasket(){
+        myBasket.addItem(myItem);
+        assertEquals(false, myBasket.removeItem(myItem1));
+    }
+
+
+
 
 }
