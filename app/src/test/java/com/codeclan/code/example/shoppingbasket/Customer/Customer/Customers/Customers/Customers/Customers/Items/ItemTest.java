@@ -42,6 +42,13 @@ public class ItemTest {
     }
 
     @Test
+    public void canSetDiscountTwo(){
+        myItem.setPrice(100);
+        myItem.setDiscount(1);
+        assertEquals(99, myItem.getDiscountedPrice(), 0.01);
+    }
+
+    @Test
     public void canSetDiscountDescription(){
         myItem.setDiscountDescription("Buy 1 get 1 free");
         assertEquals("Buy 1 get 1 free", myItem.getDiscountDescription());

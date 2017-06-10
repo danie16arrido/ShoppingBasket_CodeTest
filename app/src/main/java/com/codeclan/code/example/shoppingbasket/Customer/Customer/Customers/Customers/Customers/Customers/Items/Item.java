@@ -41,7 +41,7 @@ public class Item implements Chargeable, Discountable {
 
     @Override
     public double getDiscountedPrice() {
-        return getPrice() * (discount/100);
+        return getPrice() * (1 - (discount/100));
     }
 
     @Override
