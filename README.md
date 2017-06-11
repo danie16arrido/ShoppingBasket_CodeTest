@@ -15,5 +15,3 @@ Additionally, you must be able to calculate the total value of the shopping bask
 You must be able to validate that the code works through passing tests.
 [UMLDiagram]: https://raw.githubusercontent.com/danie16arrido/ShoppingBasket_CodeTest/master/ShoppingBasketUML.bmp
 
-![UML] (https://raw.githubusercontent.com/danie16arrido/ShoppingBasket_CodeTest/master/ShoppingBasketUML.bmp)
-![UML] (https://raw.githubusercontent.com/danie16arrido/ShoppingBasket_CodeTest/master/ShoppingBasketUML.png)
