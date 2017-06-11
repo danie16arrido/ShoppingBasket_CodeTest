@@ -13,5 +13,6 @@ Additionally, you must be able to calculate the total value of the shopping bask
 * 2% off on total for customers with loyalty cards (after all other discounts are applied).  
 
 You must be able to validate that the code works through passing tests.
+
 [UMLDiagram]: https://raw.githubusercontent.com/danie16arrido/ShoppingBasket_CodeTest/master/ShoppingBasketUML.bmp
 
