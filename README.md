@@ -14,6 +14,10 @@ Additionally, you must be able to calculate the total value of the shopping bask
 
 You must be able to validate that the code works through passing tests.
 
+## Design Patterns used in the project
+* Factory
+* Chain of Responsability
+
 ## UML DIAGRAM 
 ![UML Diagram](https://raw.githubusercontent.com/danie16arrido/ShoppingBasket_CodeTest/master/ShoppingBasketUML.bmp)
 
