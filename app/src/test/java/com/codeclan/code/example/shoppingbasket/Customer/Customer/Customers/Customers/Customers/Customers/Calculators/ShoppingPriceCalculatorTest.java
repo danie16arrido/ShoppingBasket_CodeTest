@@ -1,6 +1,8 @@
 package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Calculators;
 
+import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Customer;
 import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Items.Item;
+import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Items.ItemFactory;
 import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.ShoppingBasket.ShoppingBasket;
 
 import org.junit.Before;
@@ -48,5 +50,9 @@ public class ShoppingPriceCalculatorTest {
         myCalculator.addBasket(myBasket);
         assertEquals(125, myCalculator.getTotalWithDiscount(), 0.001);
     }
+
+
+
+
 
 }

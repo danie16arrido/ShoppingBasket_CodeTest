@@ -8,18 +8,14 @@ import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Cust
 
 public abstract class DiscountApplier {
 
-    public static int moreThanTwenty = 1;
-    public static int loyaltyCard = 2;
+    protected DiscountApplier nextDiscount;
+    private double myDiscount;
+    private double upperLimit;
+    private double lowerLimit;
 
-    public int typeOfDiscount ;
-    public DiscountApplier nextDiscount;
-
-    public DiscountApplier(int typeOfDiscount){
-        this.typeOfDiscount = typeOfDiscount;
-    }
-
-    public abstract void applyDiscount(int typeOfDiscount, ShoppingPriceCalculator myCalculator);
-    public abstract void setDiscount(double discount);
+    public abstract void applyDiscount(ShoppingPriceCalculator myCalculator);
+    public abstract void setDiscount(double discountValue);
+    public abstract void setLimits(double lowerLimit, double upperLimit);
 
     public void setNextDiscount(DiscountApplier nextDiscount){
         this.nextDiscount = nextDiscount;

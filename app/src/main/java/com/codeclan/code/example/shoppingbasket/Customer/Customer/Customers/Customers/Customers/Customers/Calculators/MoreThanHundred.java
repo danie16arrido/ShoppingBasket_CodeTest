@@ -1,21 +1,19 @@
 package com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.Calculators;
 
-import com.codeclan.code.example.shoppingbasket.Customer.Customer.Customers.Customers.Customers.Customers.ShoppingBasket.ShoppingBasket;
-
 /**
- * Created by Daniel Garrido on 10/06/2017.
+ * Created by Daniel Garrido on 11/06/2017.
  */
 
-public class MoreThanTwenty extends DiscountApplier {
+public class MoreThanHundred extends DiscountApplier {
 
     private double myDiscountValue;
     private double upperLimit;
     private double lowerLimit;
 
-    public MoreThanTwenty(){
+    public MoreThanHundred(){
         super();
-        setDiscount(10);
-        setLimits(20, 100);
+        setDiscount(15);
+        setLimits(100, 200);
     }
 
     @Override
@@ -30,7 +28,6 @@ public class MoreThanTwenty extends DiscountApplier {
         else if (nextDiscount != null){
             nextDiscount.applyDiscount(myCalculator);
         }
-        
     }
 
     @Override
@@ -43,23 +40,4 @@ public class MoreThanTwenty extends DiscountApplier {
         this.upperLimit = upperLimit;
         this.lowerLimit = lowerLimit;
     }
-
-//    @Override
-//    public void applyDiscount(int typeOfDiscount, ShoppingPriceCalculator myCalculator) {
-//
-//        if (this.typeOfDiscount == typeOfDiscount){
-//            if (myCalculator.getTotalWithDiscount() >= amountNeededToApplyDiscount){
-//                myCalculator.setFinalTotal(myCalculator.getTotalWithDiscount() * (1 - (myDiscount/100)));
-//            }else{
-//                myCalculator.setFinalTotal(myCalculator.getTotalWithDiscount());
-//            }
-//        }
-//        else {
-//            nextDiscount.applyDiscount(typeOfDiscount,myCalculator);
-//        }
-//    }
-
-
-
-
 }
